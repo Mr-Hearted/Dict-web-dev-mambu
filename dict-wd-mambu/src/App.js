@@ -1,10 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Nabvar from './Navbar';
+import Dashboard from "./pages/Dashboard"
+import AddWebinar from "./pages/AddWebinar"
+import WebinarList from "./pages/WebinarList"
+import ParticipantManagement from "./pages/ParticipantManagement"
+import  {Route, Routes} from "react-router-dom"
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <><Nabvar />
+    <div className="container">
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/add-webinar" element={<AddWebinar />} />
+        <Route path="/webinar-list" element={<WebinarList />} />
+        <Route path="/participant-management" element={<ParticipantManagement />} />
+      </Routes>
+    </div></>
   );
 }
-
 export default App;
