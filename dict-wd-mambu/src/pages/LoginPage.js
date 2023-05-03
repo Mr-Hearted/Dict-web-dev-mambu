@@ -15,6 +15,7 @@ export default function Login() {
     if (error) {
       setError(error.message);
     } else {
+      //setLoggedIn(true);
       // User is signed in, redirect to protected content
       window.location.href = '/dashboard';
     }
